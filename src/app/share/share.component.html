@@ -1,0 +1,48 @@
+<section>
+<form (ngSubmit)="submitForm()" [formGroup] = "form" >
+    <div>
+        <label for="name"> Name </label>
+        <input type="text" name = 'name' formControlName="name">
+    </div> 
+
+    <div>
+    <label for="fileds">Select your field of design</label>
+    <select name="fileds" formControlName="filed">
+        <option *ngFor="let filed of fileds" [ngValue]="filed">
+          {{ filed }}
+        </option>
+      </select>
+    </div> 
+
+    <div>
+        <label for="email"> Email for contact </label>
+        <input type="email" name = 'email' formControlName="email">
+    </div> 
+
+
+    <div *ngFor="let file of numFiles;let i = index">
+
+    <input type="file" class="hidden"
+       (change)="onFileSelected($event)" #fileUpload>
+
+    <div class="file-upload">
+
+   {{fileName[i] || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="primary" class="upload-btn"
+      (click)="fileUpload.click()">
+      <i>Upload your work</i>  
+    </button>
+    </div>
+    <button class="bg-red" (click)="subFile(i)">Delete</button>
+    </div>
+    <button class="bg-slate-400" (click)="addFile()">Add more file</button>
+
+
+
+    <div>
+      <button type="submit" > Submit </button>
+    </div>
+
+</form>
+</section>

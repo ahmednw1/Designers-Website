@@ -1,0 +1,34 @@
+<h1 *ngIf = "form == undefined" class="text-black text-lg"><app-noy-found-user></app-noy-found-user> </h1>
+
+
+<div *ngIf = "form != undefined" class="w-full h-screen bg-gray-200 flex justify-center items-center">
+    
+    <div class="bg-mainBg1 w-screen h-screen bg-cover ">
+    <div  class="grid grid-cols-6">
+        <div class="col-span-3 ">
+        <h1 class="text-white text-center font-custom4 bg-slate-500/25   font-medium leading-tight text-8xl mt-32 ml-12  mb-2 align-middle justify-center ">
+            {{form.name}}
+        </h1>
+        <h1 class=" text-left font-custom4 text-orange-700  font-bold leading-tight text-6xl  ml-12  mb-2 align-middle justify-center ">
+            <{{form.filed}}>
+        </h1>
+        <h2 class="text-gray-900/80 text-left font-custom p-4 font-medium leading-tight text-xl mt-2 ml-12  mb-2 align-middle justify-center">
+            {{form.about}}
+        </h2>
+      </div>
+        <div class="flex col-span-3 p-4 leading-tight  mt-32 mr-12  mb-2 align-middle justify-center rounded-lg ">
+             <p class="bg-black/80 h-96 w-1 items-start mx-2"></p>
+            <div>
+            <h1 class=" text-center mx-auto font-custom3 text-black  w-9/12   p-4 font-medium leading-tight text-3xl  mb-4 align-middle justify-center ">
+                Some of my work
+            </h1>
+    
+        <img class="w-full" *ngIf="form.files[0]" [src]="form.files[0]" alt="Img" class="w-7/12 h-fit rounded-md opacity-90 mx-auto ">
+       </div>
+        </div>
+    </div>
+    <h5 class="font-custom text-orange-100 font-bold ml-10 bg-black/50 p-4 w-fit rounded-lg">
+        For cantact : {{form.email}}
+    </h5>
+    </div>
+</div>
