@@ -1,12 +1,12 @@
-Designer-Client Platform
-A user-friendly platform that connects designers with clients seamlessly, making project discovery and collaboration simple.
+# Designer-Client Platform
 
-Features
-Clean and intuitive interface
+A **user-friendly platform** that connects designers with clients seamlessly, making project discovery and collaboration simple.
 
-Designer profiles and portfolios
+## 🚀 Features
 
-Client project posting and matching
+- Clean, intuitive interface
+- Designer profiles and portfolios
+- Clients can post projects and find designers easily
+- Seamless messaging and collaboration
 
-Smooth messaging and collaboration flow
 
